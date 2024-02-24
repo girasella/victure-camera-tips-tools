@@ -1,0 +1,11 @@
+#this configuration is needed to integrate PTZ commands into the webRTC custom dashboard component.
+camera_ptz:
+  alias: camera_ptz
+  mode: single
+  sequence:
+  - service: shell_command.move_camera
+    data:
+      param: '{{ direction }}'
+  - service: shell_command.stop_camera
+    data:
+      param: '{{ direction }}'

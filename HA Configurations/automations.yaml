@@ -1,0 +1,24 @@
+#This automation runs the PTZ Server proxy at HA start up.
+- id: '1706450975043'
+  alias: Start PTZ Server
+  description: ''
+  trigger:
+  - platform: homeassistant
+    event: start
+  condition: []
+  action:
+  - service: shell_command.start_ptz_server
+    data: {}
+  mode: single
+#This automation runs the timesync script each night at 04.00 AM
+- id: '1706518455294'
+  alias: IP365 Cam Timesync
+  description: ''
+  trigger:
+  - platform: time
+    at: 04:00:00
+  condition: []
+  action:
+  - service: shell_command.ip365_timesync
+    data: {}
+  mode: single

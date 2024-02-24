@@ -1,0 +1,8 @@
+#files ip365_ptz.py and ip365_ntp_sync.py are inside /homeassistant directory, along with this configuration file.
+shell_command:
+  start_ptz_server: python ip365_ptz.py & #starts the ptz proxy server script
+  left: echo left | nc 127.0.0.1 45678
+  right: echo right | nc 127.0.0.1 45678
+  up: echo up | nc 127.0.0.1 45678
+  down: echo down | nc 127.0.0.1 45678
+  ip365_timesync: python ip365_ntp_sync.py #runs the time synchronization script
