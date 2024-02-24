@@ -34,7 +34,7 @@ To locally send PTZ commands to the camera, you need to establish a TCP connecti
 `cc dd ee ff 77 4f 00 00 e3 12 69 00 48 00 00 00 00 00 00 00 af 93 c6 3b 09 f7 4b 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00`
 
 ### PTZ Commands WPF/C# test app
-Based on that information, to test the commands I created a quick and dirty (very, very dirty) C#/WPF application to send commands to the camera. Its code is  available [here](C#%20PTZ%20Commands%20Test%20App).
+Based on that information, to test the commands I created a quick and dirty (very, very dirty) C#/WPF application to send commands to the camera. Its code is  available [here](C%23%20PTZ%20Commands%20Test%20App).
 
 ### PTZ Commands Python Proxy Server
 The camera requires a persistent TCP connection to execute commands. For unknown reasons, the commands don't work if the client connects, sends the command, and immediately disconnects. To address this, I wrote a Python script that acts as a proxy server for the camera. It maintains a TCP connection with the camera and listens for incoming connections, forwarding commands when a client connects and sends one. The proxy server script code is available [here](Python%20Scripts/ip365_ptz.py). 
