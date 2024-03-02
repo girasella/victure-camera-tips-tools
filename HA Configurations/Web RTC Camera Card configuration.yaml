@@ -1,0 +1,18 @@
+#Configuration for Custom WebRTC Camera Card component - For more info consult https://github.com/AlexxIT/WebRTC
+
+type: custom:webrtc-camera
+url: rtsp://192.168.1.10:554/realmonitor?channel=1&stream=0.sdp
+ui: true
+title: Sala
+muted: true
+ptz:
+  service: script.camera_ptz
+  data_left:
+    direction: left
+  data_right:
+    direction: right
+  data_up:
+    direction: up
+  data_down:
+    direction: down
+style: '.ptz {right: unset; left: 10px; top: 40px}'
